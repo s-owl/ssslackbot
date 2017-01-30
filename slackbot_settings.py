@@ -6,7 +6,6 @@ DEFAULT_REPLY = "몰라"
 ERROR_TO = 'junsu'
 
 PLUGINS = [
-    'slackbot.plugins',
     'plugins.example',
     'plugins.weather',
 ]

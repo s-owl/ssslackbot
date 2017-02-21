@@ -8,6 +8,7 @@ ERROR_TO = 'junsu'
 PLUGINS = [
     'plugins.example',
     'plugins.weather',
+    'plugins.laugh',
 ]
 
 SKHU_LOCATION = {'lat': 37.487538, 'lng': 126.825732}

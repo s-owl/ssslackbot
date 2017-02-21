@@ -1,3 +1,4 @@
+from slackbot.bot import respond_to
 from slackbot.bot import listen_to
 from slackbot_settings import DARKSKY_API
 from slackbot_settings import SKHU_LOCATION
@@ -9,6 +10,7 @@ last_forecast = None
 forecast = None
 
 
+@respond_to('날씨')
 @listen_to('!날씨')
 def weather(message):
     global last_forecast

@@ -1,6 +1,8 @@
 from slackbot.bot import listen_to
 
 
-@listen_to('ㅋㅋㅋ')
-def bot(message):
-    message.reply(message+'ㅋㅋ')
+@listen_to('(ㅋ*)$')
+def bot(message, arg):
+    k = arg.count('ㅋ')
+    if k > 1:
+        message.reply('ㅋ'*(k+2))

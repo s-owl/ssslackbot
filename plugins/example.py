@@ -11,4 +11,4 @@ def hi(message):
 @listen_to('봇')
 @listen_to('bot')
 def bot(message):
-    message.reply('나 불렀니?')
+    message.send('나 불렀니?')

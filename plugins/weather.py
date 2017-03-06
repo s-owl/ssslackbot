@@ -32,4 +32,4 @@ def weather(message):
              "\n온도: " + str(data.temperature) + '℃' +\
              "\n기상: " + data.summary +\
              "\n풍속: " + str(round(data.windSpeed, 1)) + 'm/s'
-    message.reply(string)
+    message.send(string)

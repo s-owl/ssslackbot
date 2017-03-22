@@ -3,7 +3,9 @@ from slackbot_settings import AQICN_API
 import requests
 
 
+@listen_to('!air (.*)')
 @listen_to('!공기 (.*)')
+@listen_to('！空气 （.*)')
 def dust(message, address):
 
     r = requests.get('https://maps.googleapis.com/maps/api/geocode/json', {'address': address})

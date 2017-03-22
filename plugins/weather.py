@@ -4,9 +4,12 @@ from slackbot_settings import DARKSKY_API
 import requests
 import forecastio
 
-
+@respond_to('weather (.*)')
+@listen_to('!weather (.*)')
 @respond_to('날씨 (.*)')
 @listen_to('!날씨 (.*)')
+@respond_to('天气 (.*)')
+@listen_to('!天气 (.*)')
 def weather(message, address):
 
     r = requests.get('https://maps.googleapis.com/maps/api/geocode/json', {'address': address})

@@ -1,4 +1,4 @@
-# Need ENV : SLACKBOT_API_TOKEN, DARKSKY_API
+# Need ENV : SLACKBOT_API_TOKEN, DARKSKY_API, AQICN_API
 import os
 
 DEFAULT_REPLY = "몰라"
@@ -10,9 +10,11 @@ PLUGINS = [
     'plugins.weather',
     'plugins.reactions',
     'plugins.geo',
+    'plugins.dust',
 ]
 
 try:
     DARKSKY_API = os.environ['DARKSKY_API']
+    AQICN_API = os.environ['AQICN_API']
 except KeyError:
     pass

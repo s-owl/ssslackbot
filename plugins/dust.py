@@ -5,6 +5,7 @@ import requests
 
 @listen_to('!공기 (.*)')
 def dust(message, address):
+
     r = requests.get('https://maps.googleapis.com/maps/api/geocode/json', {'address': address})
     loc = r.json()['results'][0]['geometry']['location']
 

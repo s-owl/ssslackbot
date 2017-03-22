@@ -9,9 +9,8 @@ PLUGINS = [
     'plugins.example',
     'plugins.weather',
     'plugins.reactions',
+    'plugins.geo',
 ]
-
-SKHU_LOCATION = {'lat': 37.487538, 'lng': 126.825732}
 
 try:
     DARKSKY_API = os.environ['DARKSKY_API']

@@ -8,7 +8,7 @@ def hi(message):
     message.react('+1')
 
 
-@listen_to('봇')
-@listen_to('bot')
+@respond_to('test')
+@respond_to('테스트')
 def bot(message):
     message.send('나 불렀니?')

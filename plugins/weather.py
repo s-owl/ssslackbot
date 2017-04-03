@@ -4,6 +4,7 @@ from slackbot_settings import DARKSKY_API
 import requests
 import forecastio
 
+
 @respond_to('weather (.*)')
 @listen_to('!weather (.*)')
 @respond_to('날씨 (.*)')
@@ -23,7 +24,7 @@ def weather(message, address):
 
     data = forecast.currently()
     string = f"현재 `{address}`의 날씨입니다.\n" \
-             f"{forecast.daily().summary}\n" \
+             f"{forecast.hourly().summary}\n" \
              f"\n온도: `{str(data.temperature)}℃`\n" \
              f"\n기상: `{data.summary}`\n" \
              f"\n풍속: `{str(round(data.windSpeed, 1))}m/s`"

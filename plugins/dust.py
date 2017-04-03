@@ -1,10 +1,14 @@
 from slackbot.bot import listen_to
+from slackbot.bot import respond_to
 from slackbot_settings import AQICN_API
 import requests
 
 
+@respond_to('air (.*)')
 @listen_to('!air (.*)')
+@respond_to('공기 (.*)')
 @listen_to('!공기 (.*)')
+@respond_to('空气 （.*)')
 @listen_to('！空气 （.*)')
 def dust(message, address):
 

@@ -9,6 +9,7 @@
 - environment variable
   - SLACKBOT_API_TOKEN (slack에서 bot을 추가하고 해당 token을 저장합니다.)
   - DARKSKY_API (날씨 plugin을 위해서 darksky에서 api를 받습니다.)
+  - AQICN_API (공기 plugin을 위해서 aqicn에에서 api를 받습니다.)
 
 ## Usage
 
@@ -17,6 +18,17 @@ git clone https://github.com/vaporize93/ssslackbot
 cd ssslackbot
 pip install -r requirements.txt
 python3 run.py
+```
+
+## Deploy
+
+```bash
+docker build -t ssslackbot .
+docker run --name user/ssslackbot \
+           --env="SLACKBOT_API_TOKEN=<your_token>" \
+           --env="DARKSKY_API=<your_token>" \
+           --env="AQICN_API=<your_token>" \
+           -d ssslackbot
 ```
 
 ## Contribution

@@ -17,5 +17,6 @@ PLUGINS = [
 try:
     DARKSKY_API = os.environ['DARKSKY_API']
     AQICN_API = os.environ['AQICN_API']
+    YANDEX_TRANSLATE_API = os.environ['YANDEX_TRANSLATE_API']
 except KeyError:
     pass

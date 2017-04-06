@@ -9,7 +9,7 @@ import requests
 @respond_to('공기 (.*)')
 @listen_to('!공기 (.*)')
 @respond_to('空气 （.*)')
-@listen_to('！空气 （.*)')
+@listen_to('！空气 (.*)')
 def dust(message, address):
 
     r = requests.get('https://maps.googleapis.com/maps/api/geocode/json', {'address': address})

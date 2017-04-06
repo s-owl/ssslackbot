@@ -10,7 +10,7 @@ import forecastio
 @respond_to('날씨 (.*)')
 @listen_to('!날씨 (.*)')
 @respond_to('天气 (.*)')
-@listen_to('!天气 (.*)')
+@listen_to('！天气 (.*)')
 def weather(message, address):
 
     r = requests.get('https://maps.googleapis.com/maps/api/geocode/json', {'address': address})

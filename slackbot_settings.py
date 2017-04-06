@@ -11,6 +11,7 @@ PLUGINS = [
     'plugins.reactions',
     'plugins.geo',
     'plugins.dust',
+    'plugins.filter',
 ]
 
 try:

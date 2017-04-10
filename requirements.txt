@@ -1,2 +1,3 @@
 slackbot>=0.4.1
 python-forecastio>=1.3.5
+yandex.translate>=0.3.5
